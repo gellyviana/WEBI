@@ -3,3 +3,18 @@ h3 {text-align: center;
 	color: green;
 	font-family: arial;
 }
+h5,h4{
+	text-align: right;
+	color: red; 
+}
+table, th, td{
+	width: 250px;
+	height: 90px;
+	padding: 5px;
+	border: 1px solid green;
+	text-align: center;
+	color: red;
+}
+table{
+	border-collapse: collapse;
+}

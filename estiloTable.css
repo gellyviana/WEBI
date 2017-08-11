@@ -1,0 +1,11 @@
+table{
+	width: 90%;
+	border: 5px ridge;
+	color: #AFAFAF;
+
+}
+thead{
+	text-align: white;
+	background: black;
+	text-transform: uppercase;
+}
