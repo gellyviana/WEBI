@@ -1,0 +1,28 @@
+body{
+	margin: auto;
+	max-width: 90%;
+}
+
+#div1 {
+	background-color: grey; /* maior */
+	width: 45%;
+	height: 50px;
+	position: absolute;
+	z-index:40px;
+}
+
+#div2 {
+	background-color: aqua; /* intermediária */
+	width: 30%;
+	height: 50px;
+	position: absolute;
+	z-index:5px;
+}
+
+#div3 {
+	background-color: fuchsia; ; /* menor */
+	width: 15%;
+	height: 50px;
+	position: absolute;
+	z-index:5px;
+}
