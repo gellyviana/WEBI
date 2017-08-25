@@ -1,0 +1,8 @@
+@font-face{
+	font-family: 'nomeDaFonte';
+	src:url('../alexbrush/AlexBrush-Regular.ttf');
+}
+p.caixa{
+	font-family: 'nomeDaFonte';
+	font-size: 4em;
+}
