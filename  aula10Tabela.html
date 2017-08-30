@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabela com Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	var valor = prompt("Digite a quantidade de linhas");
+	document.write("<table> ");
+	for (var i = 0; i < valor; i++) {
+			if(i%2 == 0){
+				document.write("<tr style= 'color: red '><td>"+ i +"</td></tr>");
+
+			}
+			else{
+				document.write("<tr style= 'color: blue '><td>"+ i +"</td></tr>");
+			}
+			
+		}
+		document.write("</table>");
+</script>
+</body>
+</html>
