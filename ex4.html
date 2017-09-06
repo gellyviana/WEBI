@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercício 4</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var numeros=[];
+		var aux, e = 0;
+		var media=0;
+		do{
+			aux=parseInt(prompt("Digite os numeros"));
+			if(aux > 0){
+				numeros[e]=(aux);
+				e++;
+			}
+		}while(aux > 0);
+		for (var i = 0; i < numeros.length; i++) {
+			media += numeros[i];
+		}
+		document.writeln(media/numeros.length);
+	</script>
+</body>
+</html>
