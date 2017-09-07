@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="calculadora.js"></script>
+
+	<style>
+	div.container{
+	    width: 100%;
+	    
+	    border: 1px solid gray;
+	}	
+
+	header, footer{
+	    padding: 1em;
+	    color: white;
+	    background-color: black;
+	    clear: left;
+	    text-align: center;
+	}
+
+	footer{
+		position: fixed;
+		bottom: 0;
+		width: 98%;
+	}
+
+	nav {
+	    float: left;
+	    
+	    margin: 0;
+	    padding: 1em;
+	}
+
+	ul #lista {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	}
+	   
+	ul li {
+	    display: inline;
+	}
+
+	.conteudo{
+		background: gray;
+		float: right;
+		width: 80%;
+		height: 6000px	;
+	}
+
+	span{
+	    display:inline-block;
+	    transform: rotate(180deg);
+	}
+
+
+	</style>
+	<title>Calculadora</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Calculadora</h1>
+		</header>
+		<nav>
+			 <ul id="lista">
+			  <li><a href="#">Home</a></li>
+			  <li><a href="#">Científica</a></li>
+			  <li><a href="#">Financeira</a></li>
+			</ul> 
+		</nav>
+		<div class="conteudo">
+			<p>Calculadora da Gelly</p>
+			<button id="resultado" onclick="displayUser()">Clique em mim!!!</button>
+		</div>
+		<footer>Copyleft <span> &copy; </span> gellyviana.com.br</footer>
+	</div>
+
+</body>
+</html>
