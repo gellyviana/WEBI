@@ -1,0 +1,51 @@
+div.container{
+	    width: 100%;
+	    border: 1px solid gray;
+	}	
+
+header, footer{
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+footer{
+	position: fixed;
+	bottom: 0;
+	width: 98%;
+}
+
+nav {
+    float: left;
+    
+    margin: 0;
+    padding: 1em;
+}
+
+ul #lista {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+   
+ul li {
+    display: inline;
+}
+
+.conteudo{
+	background: pink;
+	float: right;
+	width: 80%;
+	height: 6000px	;
+}
+
+.conteudo #numerosImg{
+	width: 90%;
+	height: 600px	;
+}
+span{
+    display:inline-block;
+    transform: rotate(180deg);
+}
