@@ -100,3 +100,26 @@ function maiorOuMenor(){
 		document.getElementById("resultado").innerHTML = "O " + number1 + " é igual a " + number2;
 	}
 }
+
+function quantosNumerosQuiser(){
+	var bollean = true;
+	var number;
+	var vetor = [];
+	var mediaTotal = 0;
+	var somaTotal = 0; 
+	var cont = 0;
+
+	while(bollean){
+		number = window.prompt("Digite um número inteiro");
+		if(number == 0){
+			bollean = false;
+		}else{
+			vetor[cont] = parseInt(number);
+			somaTotal += parseInt(number);
+			cont ++;
+		}
+	}
+	mediaTotal = somaTotal/cont;
+	document.getElementById("resultado").addEventListener("click", quantosNumerosQuiser);
+	document.getElementById("resultado").innerHTML ="Valores digitados são: [" + vetor + "], a soma total é: " + somaTotal + " e a média aritimética: " + mediaTotal;
+}
