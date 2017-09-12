@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<title>Soma de de elementos nos vetores</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<script type="text/javascript">
+		var boolean = true;
+		var vetorResultado = [];
+		var vetor1 = [];
+		var vetor2 = [];
+		var cont1 = 0; 
+		var cont2 = 0; 
+		
+		while(boolean){
+			vetor1[cont1] = window.prompt("Digite a sequência do primeiro vetor");
+			if(vetor1[cont1] == 0){
+				boolean = false;
+			}else{
+				cont1++;
+			}
+		}
+		boolean = true;
+		while(boolean){
+			vetor2[cont2] = window.prompt("Digite a sequência do segundo vetor");
+			if(vetor2[cont2] == 0){
+				boolean = false;
+			}else{
+				cont2++;
+			}
+		}
+		if(cont1 => cont2){
+			for(var i=0; i < cont1; i++){
+				vetorResultado[i] = vetor1[i] + vetor2[i];
+			}
+		}else{
+			for(var i=0; i < cont2; i++){
+				vetorResultado[i] = vetor1[i] + vetor2[i];
+			}
+			document.writeln(vetorResultado);
+		}
+		
+	</script>
+
+</body>
+</html>
