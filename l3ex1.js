@@ -1,10 +1,10 @@
-function Pessoa(var primeiroNome, var ultimoNome, var nascimento, var altura, var peso, var sexo){
+function Pessoa(primeiroNome, ultimoNome, nascimento, altura, peso, sexo){
 	this.primeiroNome = primeiroNome;
 	this.ultimoNome = ultimoNome;
 	this.nascimento = nascimento;
 	this.altura = altura;
 	this.peso = peso;
-	this sexo = sexo;
+	this.sexo = sexo;
 
 	function nomeCompleto(){
 		return this.primeiroNome + this.ultimoNome;
