@@ -1,35 +1,38 @@
-function Pessoa(primeiroNome, ultimoNome, nascimento, altura, peso, sexo){
-	this.primeiroNome = primeiroNome;
-	this.ultimoNome = ultimoNome;
-	this.nascimento = nascimento;
-	this.altura = altura;
-	this.peso = peso;
-	this.sexo = sexo;
+class Pessoa{
 
-	function nomeCompleto(){
-		return this.primeiroNome + this.ultimoNome;
+
+	constructor(primeiroNome, ultimoNome, nascimento, altura, peso, sexo){
+		this.primeiroNome = primeiroNome;
+		this.ultimoNome = ultimoNome;
+		this.nascimento = nascimento;
+		this.altura = altura;
+		this.peso = peso;
+		this.sexo = sexo;
 	}
-	function idadeAtual(){
+	 nomeCompleto(){
+		return this.primeiroNome +" "+ this.ultimoNome;
+	}
+     idadeAtual(){
 		var data = this.nascimento.split("/");
 		var idade = 2017 - parseInt(data[2]);
-		return "Sua idade: " + this.idade;
+		return "Sua idade: " + idade;
 	}
-	function dataNascimento(){
+	 dataNascimento(){
 		return "Sua data de nascimento: " + this.nascimento;
 	}
-	function diaNascimento(){
+	 diaNascimento(){
 		var data = this.nascimento.split("/");
-		return "Seu dia de nascimento: " + this.data[0];
+		return "Seu dia de nascimento: " + data[0];
 	}
-	function mesNascimento(){
+	 mesNascimento(){
 		var data =  this.nascimento.split("/");
-		return "Seu mês de nascimento: " + this.data[1];
+		return "Seu mês de nascimento: " + data[1];
 	}
-	function anoNascimento(){
+	 anoNascimento(){
 		var data =  this.nascimento.split("/");
-		return "Seu ano de nascimento: " + this.data[2];
+		return "Seu ano de nascimento: " + data[2];
 	}
-	function imc(){
-		return this.peso/math(this.altura,2);
+	 imc(){
+		return this.peso/Math.pow(parseFloat(this.altura),2);
 	}
 }
