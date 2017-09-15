@@ -7,9 +7,50 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var p1 = new Pessoa("Gelly", "Mota", "28/09/1988", 1.60, 65, "F");
-		var resposta = this.idadeAtual();
-		document.writeln(resposta);
-	</script>
+		function clique() {
+			var nome = document.getElementById('nome_p').value;
+			var sobrenome = document.getElementById('nome_s').value;
+			var nascimento= document.getElementById('datanascimento').value;
+			var altura = document.getElementById('altura').value;
+			var paso = document.getElementById('peso').value;
+			var sexo = document.getElementById('sexo').value;
+			var p1  = new Pessoa(nome, sobrenome, nascimento, altura, peso, sexo);
+			
+			document.writeln(p1.nomeCompleto());
+			document.writeln(p1.idadeAtual());
+			document.writeln(p1.dataNascimento());
+			document.writeln(p1.diaNascimento());
+			document.writeln(p1.mesNascimento());
+			document.writeln(p1.anoNascimento());
+			document.writeln(p1.imc());
+	}
+</script>
+
+<form>
+	<label for="nome_p">Primeiro Nome
+		<input type="text" name="a" id="nome_p"><br>
+	</label>
+	<label for="nome_p">Sobrenome
+		<input type="text" name="b" id="nome_s"><br>
+	</label>
+	<label for="nome_p">Data de nascimento (dd/mm/aaa)
+		<input type="text" name="c" id="datanascimento"><br>
+	</label>
+	<label for="nome_p">Altura em Metros
+		<input type="text" name="d" id="altura"><br>
+	</label>
+	<label for="nome_p">Peso em Kg
+		<input type="text" name="e" id="peso"><br>
+	</label>
+	<label for="nome_p">Sexo
+		<select id="sexo">
+			<option value="Feminino">Feminino</option>
+			<option value="Mesculino">Masculino</option>
+		</select><br>
+	</label>
+	<br>
+	<input type="button" name="envio" value="Enviar" onclick="clique();"><br>
+</form>
+<textarea id="resposta"></textarea>
 </body>
 </html>
