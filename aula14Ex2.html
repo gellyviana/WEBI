@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>Título da Página</title>
+    <meta charset="utf8" />
+    <script type="text/javascript">
+
+      function perguntarNome(){
+          var nome = prompt('Qual seu nome?');
+          document.getElementById("nomes").innerHTML += '<li>' + nome + '</li>';
+      }
+
+    </script>
+  </head>
+  <body>
+    <p>
+      O conteúdo da página aqui...
+    </p>
+  
+  <button onclick="perguntarNome();">Clique</button>
+  
+  <ul id="nomes">
+
+  </ul>
+  
+  </body>
+
+</html>

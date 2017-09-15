@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>Título da Página</title>
+    <meta charset="utf8" />
+    <script type="text/javascript">
+      
+      function digaOi(nome){
+          document.getElementById("saudacao").innerHTML += '<b>' + nome + '! </b><br> Ola ';
+      }
+
+      function perguntarNome(){
+
+            nome = prompt('Qual seu nome?');
+            digaOi( nome );
+      }
+
+
+    </script>
+  </head>
+  <body>
+    <p>
+      
+    </p>
+	
+	<button onclick="perguntarNome();">Clique</button>
+	
+	<div id="saudacao"> Ola </div>
+	
+  </body>
+</html>
