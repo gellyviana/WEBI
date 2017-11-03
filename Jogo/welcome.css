@@ -1,0 +1,36 @@
+#shape{
+	background-image: url(image2.jpg);
+	size: 200px;
+}
+#titulo{
+	text-align: center;
+	font-size: 100px;
+	color: black;
+}
+#jogo{
+	text-align: center;
+	font-size: 50px;
+	color: black;
+}
+#description{
+	position: absolute;
+	left: 50px;
+	top: 400px;
+	font-style: normal;
+	font-size: 40px;
+	color: black;
+}
+#playPc{
+	position: absolute;
+	left: 900px;
+	top: 450px;
+	font-style: normal;
+	font-size: 30px;
+}
+#playHuman{
+	position: absolute;
+	left: 900px;
+	top: 500px;
+	font-style: normal;
+	font-size: 30px;
+}
