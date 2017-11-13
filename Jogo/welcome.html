@@ -8,9 +8,56 @@
 </head>
 <body id="shape">
 	<h1 id="titulo">Welcome</h1>
-	<h2 id="jogo">Play stone, paper and scissors</h2>
-	<h2 id="description">Choose one of the options</h2>
-	<button id="playPc">Play with PC</button>
-	<button id="playHuman">Play with others Player</button>
+	<h2 id="jogo">Play stone, paper and scissors.</h2>
+	<script type="text/javascript">
+		var jogador1;
+		var jogador2; 
+		var playerPc;
+		var playerHm; 
+		function cadastro() {
+			var name = document.getElementById('nomeCompleto').value;
+			var sexo = document.getElementById('sexo').value;
+			var typePlayer = document.getElementById('typePlayer').value;
+			jogador1 = new Jogador(name, sexo, typePlayer);
+			jogador2 = new Jogador("Pc", "@#$$#", "Computer");
+			window.alert("Choose one of the options");
+
+		}
+		function optionsUsers(element){
+			jogador2.play = jogador2.opcaoSelecionada();
+			jogador1.play = element.id;
+			window.alert(jogador2.play + jogador1.play);
+			var confront = new Confront();
+			confront.whoWin(jogador2, jogador1);
+			//confront.insertTable();		
+		}
+	</script>
+	<form name="cadastroCompleto" id="form">
+		Register in the Player.<br/>
+		Name: <input type="text" name="nomeCompleto" id="nomeCompleto"> <br/>
+		Sex: <br/>
+		<input type="radio" name="sexo" value="M" id="sexo">Masculino<br/>
+		<input type="radio" name="sexo" value="F" id="sexo">Feminino<br/>
+		<br/>
+		Type Player: <br/>
+		<input type="radio" name="typePlayer" value="Human" id="typePlayer">Human<br/>
+		<br/>
+		<input type="button" value="Enviar" onclick="cadastro();">
+
+	</form>
+	<div id="lista"></div>
+	<input type="button" name="papel" id="papel" value="PAPER" onclick="optionsUsers(this);">
+	<input type="button" name="pedra" id="pedra" value="STONE" onclick="optionsUsers(this);">
+	<input type="button" name="tesoura" id="tesoura" value="SCISSOR" onclick="optionsUsers(this);">
+
+	<table id="myTable" style="100%">
+		<tr id="0">
+			<th> Name</th>
+			<th> Points</th>
+			<th> Options</th>
+			<th> Time</th>
+		</tr>
+	</table>
+	<br>
 </body>
 </html>
