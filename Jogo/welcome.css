@@ -2,35 +2,56 @@
 	background-image: url(image2.jpg);
 	size: 200px;
 }
-#titulo{
-	text-align: center;
-	font-size: 100px;
-	color: black;
+#form{
+	position: absolute;
+	left: 100px;
+	top: 350px;
+	font-style: normal;
+	font-size: 20px;
 }
-#jogo{
+#titulo{
 	text-align: center;
 	font-size: 50px;
 	color: black;
 }
+#jogo{
+	text-align: center;
+	font-size: 30px;
+	color: black;
+	left: 100px;
+}
 #description{
 	position: absolute;
-	left: 50px;
+	left: 100px;
 	top: 400px;
 	font-style: normal;
 	font-size: 40px;
 	color: black;
 }
-#playPc{
+#papel{
 	position: absolute;
-	left: 900px;
+	left: 1050px;
+	top: 400px;
+	font-style: normal;
+	font-size: 30px;
+}
+#pedra{
+	position: absolute;
+	left: 1050px;
 	top: 450px;
 	font-style: normal;
 	font-size: 30px;
 }
-#playHuman{
+#tesoura{
 	position: absolute;
-	left: 900px;
+	left: 1050px;
 	top: 500px;
 	font-style: normal;
 	font-size: 30px;
+}
+table,td{
+	position: absolute;
+	left: 500px;
+	top: 200px;
+	border: 1px solid black;
 }
