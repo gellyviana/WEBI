@@ -6,6 +6,7 @@ class Jogador{
 		this.typePlayer = typePlayer;
 		this.play = "";
 		this.points = 0;
+		this.totalMatches = 0;
 	}
 	opcaoSelecionada(){
 		var plays = ["papel", "pedra", "tesoura"];
@@ -25,25 +26,39 @@ class Confront{
 		if (playerPc.play == playerHm.play) {
 			window.alert(" Tie !!!");
 			playerPc.points += 1;
+			playerPc.totalMatches += 1;
 			playerHm.points += 1;
+			playerHm.totalMatches += 1;
 		}else if((playerPc.play == 'papel') && (playerHm.play == 'tesoura')){
 			window.alert(playerHm.name + " Win!!!");
 			playerHm.points += 3;
+			playerPc.totalMatches += 1;
+			playerHm.totalMatches += 1;
 		}else if((playerPc.play == 'tesoura') && (playerHm.play == 'pedra')){
 			window.alert(playerHm.name + " Win!!!");
 			playerHm.points += 3;
+			playerPc.totalMatches += 1;
+			playerHm.totalMatches += 1;
 		}else if((playerPc.play == 'pedra') && (playerHm.play == 'papel')){
 			window.alert(playerHm.name + " Win!!!");
 			playerHm.points += 3;
+			playerPc.totalMatches += 1;
+			playerHm.totalMatches += 1;
 		}else if((playerPc.play == 'tesoura') && (playerHm.play == 'papel')){
 			window.alert(playerPc.name + " Win!!!");
 			playerPc.points += 3;
+			playerPc.totalMatches += 1;
+			playerHm.totalMatches += 1;
 		}else if ((playerPc.play == 'pedra') && (playerHm.play == 'tesoura')){
 			window.alert(playerPc.name + " Win!!!");
 			playerPc.points += 3;
+			playerPc.totalMatches += 1;
+			playerHm.totalMatches += 1;
 		}else{
 			window.alert(playerPc.name + " Win!!!");
 			playerPc.points += 3;
+			playerPc.totalMatches += 1;
+			playerHm.totalMatches += 1;
 		}
 	}
 	
