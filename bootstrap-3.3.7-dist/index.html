@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" rel="stylesheet"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,7 +31,7 @@
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                   </button>
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="index.html">
                     <img id="foto" src="criacoesGelly.png">
                   </a>
                 </div>
@@ -39,8 +40,8 @@
             <div class="col-md-5">
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home<span class="sr-only">(current)</span> </a></li>
-                  <li><a href="#">Loja</a></li>
+                  <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span> </a></li>
+                  <li><a href="loja.html">Loja</a></li>
                 </ul>
               </div>
             </div>
@@ -50,29 +51,27 @@
                   <input type="text" class="form-control" placeholder="Buscar">
                 </div>
                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" id="idCarrinho"></span></button>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user" id="idUser"></span></button>
               </form>
             </div>  
           </nav>
         </div>
-        <div class="row" id="fim">
-          <div class="col-md-4 text-center">
-            <img class="img-responsive" id="bata" src="bata.jpg">
-            <button type="button" class="btn btn-success">Comprar</button>
-          </div>
-          <div class="col-md-4 text-center">
-            <img class="img-responsive" id="bata" src="bata.jpg">
-            <button type="button" class="btn btn-success">Comprar</button>
-          </div>
-          <div class="col-md-4 text-center">
-            <img class="img-responsive" id="bata" src="bata.jpg">
-            <button type="button" class="btn btn-success">Comprar</span></button>
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+          <div class="jumbotron">
+            <h1>Bem vindo ao Criações Gelly.</h1>
+            <p> A sua loja virtual mais completa de opções para fardamento de profissionais de saúde, sempre com novidades e promoções para você e sua empresa.</p>
+            <p><a class="btn btn-primary btn-lg" href="loja.html" role="button">Loja Virtual</a></p>
           </div>
         </div>
+        <div class="col-md-4"></div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>
