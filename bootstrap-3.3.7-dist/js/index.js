@@ -2,6 +2,11 @@ var listaCarrinhos = [];
 var listaClientes = [];
 var listaProdutos = [];
 var listaCompras = [];
+var cliente;
+var nome;
+var cpf;
+var endereco;
+var produto;
 function Produto( codigo, foto, nome, descricao, preco, peso){
 
 	this.codigo = codigo;
@@ -25,61 +30,72 @@ function Comprador(nome, endereco, cpf){
 	this.cpf = cpf;
 }
 
-function criaLoja(){
 
-	var num = 0;
+function Carrinho(cliente, listaCompras){
 
-	while(num < listaProdutos.length){
-		var div = document.createElement('div');
-		div.className = "col-md-4";
-		var conteudo = document.createElement(listaProdutos[num]);
-		conteudo.id = num;
-		div.appendChild(conteudo);
-		document.body.appendChild(div);
-		num++;
-	}
+	this.cliente = cliente; 
+	this.listaClientes = listaClientes;
 	
-}
-
-function Carrinho(idComprador){
-
-	var nomeComprador;
-	var produto;
-
-	function encherCarrinho(idComprador, nomeComprador){
-		for (var i = 0; i < listaCarrinhos.length; i++) {
-			if (listaCarrinhos[i].cpf == idComprador) {
-				compras[i] = produto;
-			}else{
-				//é criado uma nova lista de compras 
-			}
+	function encherCarrinho(){
+		if(listaCompras == null){
+			listaCompras[0] = produto;
+		}else{
+			  while(listaCompras[i] != null){
+			  		i++;
+			  }
+			  listaCompras[i] = produto;
 		}
 	}
 	function esvaziarCarrinho(){
-
+		while(listaCompras[i] != null){
+			listaCompras[i] = null;
+			i++;
+		}
 	}
 }
 
+function cadastrarCliente(){
+
+	nome = document.getElementById('exempleName').value;
+	cpf = document.getElementById('exempleCpf').value;
+	endereco = document.getElementById('exempleEndereco').value;
+	produto = document.getElementById('bata').value;
+
+	cliente = new Comprador(nome, cpf, endereco);
+
+	document.getElementById('idUser').innerHTML = nome;
+	document.getElementById('idCarrinho').innerHTML = 1;
+	$('#myModal').modal('hide');
+}
+
 function comprar(){
-	var nome = document.getElementById('exempleName').value;
-	var cpf = document.getElementById('exempleCpf').value;
-	var endereco = document.getElementById('exempleEndereco').value;
+
 	var i = 0;
-	if (listaClientes == null) {
-		var cliente = new Comprador(nome, cpf, endereco);
-		var carrinhoCliente = new Carrinho(cpf);
-		listaClientes[0] = c;
-	}else{
+
+	if (listaClientes == null) { //Quando é o primeiro cliente comprador.
+		var carrnhoCliente = new Carrinho(cliente,listaClientes);
+		listaClientes[0] = cliente;
+	}else if(listaClientes != null){ //Quando não tem cadastro
 		while (i < listaClientes.length) {
 			if (listaClientes[i].cpf != cpf) {
 				i++;
 			}
 		}
-		var cliente = new Comprador(nome, cpf, endereco);
-		var carrinhoCliente = new Carrinho(cpf);
+		var carrnhoCliente = new Carrinho(cliente,listaClientes);
 		listaClientes[i] = cliente;
-		listaCarrinhos[i] = carrinhoCliente;
+	}else{ //Quando possui cadastro na loja
+		while (i < listaClientes.length) { 
+			if (listaClientes[i].cpf != cpf) {
+				i++;
+			}
+			document.getElementById('modalFooter').innerHTML = "Usuário já cadastrado!";
+		}
 	}
-	document.getElementById('idUser').innerHTML = nome;
-	document.getElementById('idCarrinho').innerHTML = 1;
 }
+
+
+/**$(function() {
+  $.fn.MessageBox('#openModal').click(function() {
+     $('#logModal').modal('show');
+  });
+});**/

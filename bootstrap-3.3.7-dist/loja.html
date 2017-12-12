@@ -38,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-3">
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span> </a></li>
@@ -46,66 +46,137 @@
                 </ul>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
               <form class="navbar-form navbar-right">
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Buscar">
                 </div>
                 <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" id="idCarrinho"></span></button>
-                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-user" id="idUser"></span></button>
               </form>
+            </div>
+            <div class="col-md-3">
+              <form class="navbar-form navbar-right">
+                <button type="submit" class="btn btn-warning" onclick="$(this).MessageBox();"><span class="glyphicon glyphicon-shopping-cart" id="idCarrinho"></span></button>
+                 <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-user" id="idUser"></span>Login</button>
+                <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-off"></span>Sair</button>
+              </form>
+            </div>
+              <div class="modal fade" id="logModal" role="dialog">
+                <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Carrinho</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p></p>
+                    </div>
+                    <div class="modal-footer" id="modalFooter">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Comprar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>  
           </nav>
         </div>
         <div class="row" id="fim">
           <div class="col-md-4" id="img1">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button1" data-toggle="modal" data-target="#myModal" onclick="">Comprar</button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button1" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img2">
-            <img class="img-responsive" id="bata" src="bata.jpg" style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button2" data-toggle="modal" data-target="#myModal">Comprar</button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button2" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img3">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img4">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img5">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img6">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img7">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img8">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img9">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img10">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img11">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
           <div class="col-md-4" id="img12">
-            <img class="img-responsive" id="bata" src="bata.jpg"  style="margin-left: 70px;">
-            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Comprar</span></button>
+            <img class="img-responsive" id="bata" src="bata.jpg">
+            <p id="p1"> Nome: Bata Feminina.</p> 
+            <p id="p2"> Descrição: Produto produzido no Brasil, de microfibra, 100% Poliéster.</p> 
+            <p id="p3"> Peso: 450g.</p>
+            <button type="button" class="btn btn-success" id="button3" data-toggle="modal" data-target="#myModal">Adicionar ao Carrinho</span></button>
+            <button type="button" class="btn btn-default" id="button4">Cancelar</span></button>
           </div>
         </div>
         <div class="modalRow">
@@ -135,9 +206,9 @@
                       </div>
                     </form>
                   </div>
-                  <div class="modal-footer">
+                  <div class="modal-footer" >
                     <button type="submit" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-primary" onclick="comprar();">Salvar</button>
+                    <button type="submit" class="btn btn-primary" onclick="cadastrarCliente(), comprar();">Salvar</button>
                   </div>
                 </div>
               </div>
@@ -156,3 +227,4 @@
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
   </body>
 </html>
+
