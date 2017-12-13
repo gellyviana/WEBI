@@ -1,4 +1,7 @@
 var vetorImg = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.png', 'img/img5.jpg', 'img/img6.jpg', 'img/img7.jpg', 'img/img8.jpg', 'img/img9.jpg', 'img/img10.jpg', 'img/img11.png', 'img/img12.jpg'];
+var listaCarrinhos = [];
+var listaCompras = [];
+
 
 function Produto(nome, codigo, preco, peso, descricao, foto){
 	this.nome = nome;
@@ -157,9 +160,50 @@ function onloadLoja(){
 	document.getElementById('conteudo').appendChild(divNova4);
 }
 
-function Carrinho(dono, listaCompras){
+function Carrinho(dono, produto){
+
 	this.dono = dono;
-	this.listaCompras = listaCompras;
+	var i = 0;
+	
+	if (listaCompras.length == 0) {
+		listaCompras[0] = produto;
+	}else{
+		while(listaCompras[i] != null){
+			i++;
+		}
+		listaCompras[i] = produto;
+	}
+	
+}
+
+function adicionaNoCarrinho(dono, produto){
+	var i = 0;
+	var carrinho = new Carrinho(dono, produto);
+	if (listaCarrinhos.length == 0) {
+		listaCarrinhos[0] = carrinho;
+	}else{
+		while(listaCarrinhos[i] != null){
+			i++;
+		}
+		listaCarrinhos[i] = carrinho;
+	}
+}
+
+function removerDoCarrinho(dono, produto){
+
+	for (var i = 0; i < listaCarrinhos.length; i++) {
+		if (listaCarrinhos[i].dono == dono) {
+			for (var i = 0; i < listaCompras.length; i++) {
+				if (listaCompras[i] == produto) {
+					listaCompras[i] = "";
+				}
+			}
+		}
+	}
+}
+
+function Usuario(nome){
+	this.nome = nome;
 }
 
 $('#chamaForm').on('click', mostraForm);
@@ -184,5 +228,9 @@ function mostraForm(){
 	div4.insertBefore(span, input);
 	div2.appendChild(div4);
 	divForm.appendChild(div2);
+
+}
+
+function adicionaCarrinho(){
 
 }
