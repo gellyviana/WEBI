@@ -1,6 +1,7 @@
 var vetorImg = ['img/img1.jpg', 'img/img2.jpg', 'img/img3.jpg', 'img/img4.png', 'img/img5.jpg', 'img/img6.jpg', 'img/img7.jpg', 'img/img8.jpg', 'img/img9.jpg', 'img/img10.jpg', 'img/img11.png', 'img/img12.jpg'];
 var listaCarrinhos = [];
 var listaCompras = [];
+var valorTotal = 0;
 
 
 function Produto(nome, codigo, preco, peso, descricao, foto){
@@ -10,6 +11,7 @@ function Produto(nome, codigo, preco, peso, descricao, foto){
 	this.peso = peso;
 	this.descricao = descricao;
 	this.foto = foto;
+	this.quantidade = 0;
 }
 
 p1 = new Produto("Nome: Bata Feminina de Microfibra", "Código: 001", "100,00", "Peso: 0,450 kg", "Descrição: Bata Feminina de Microfibra, 100% Poliéster", "img/img1.jpg");
@@ -160,6 +162,10 @@ function onloadLoja(){
 	document.getElementById('conteudo').appendChild(divNova4);
 }
 
+function Usuario(nome){
+	this.nome = nome;
+}
+
 function Carrinho(dono, produto){
 
 	this.dono = dono;
@@ -173,19 +179,31 @@ function Carrinho(dono, produto){
 		}
 		listaCompras[i] = produto;
 	}
-	
+
+	function atualizaCarrinho(produto){
+
+		var length = listaCompras.length;
+		listaCompras[length + 1] = produto;
+
+	}
 }
 
 function adicionaNoCarrinho(dono, produto){
+
 	var i = 0;
+	var length;
 	var carrinho = new Carrinho(dono, produto);
 	if (listaCarrinhos.length == 0) {
 		listaCarrinhos[0] = carrinho;
 	}else{
-		while(listaCarrinhos[i] != null){
+		while(listaCarrinhos[i].dono != dono){
+			if (listaCarrinhos[i].dono == dono) {
+				carrinho.atualizaCarrinho(produto);
+			}
 			i++;
 		}
-		listaCarrinhos[i] = carrinho;
+		length = listaCarrinhos.length;
+		listaCarrinhos[length + 1] = carrinho;
 	}
 }
 
@@ -202,14 +220,10 @@ function removerDoCarrinho(dono, produto){
 	}
 }
 
-function Usuario(nome){
-	this.nome = nome;
-}
-
 $('#chamaForm').on('click', mostraForm);
 
 function mostraForm(){
-	window.alert("OI");
+	
 	var divForm = document.getElementById("form");
 	var div1 = document.createElement("div");
 	var div2 = document.createElement("div");
@@ -231,6 +245,17 @@ function mostraForm(){
 
 }
 
-function adicionaCarrinho(){
+function calculaValorTotal(dono){
+	
+}
 
+function calculaValorItem(){
+
+	var testeValor;
+	var testePeso;
+
+	for (var i = 0; i < listaCompras.length; i++) {
+		testeValor += parseFloat(listaCompras[i].preco);
+		testePeso += parseFloat(listaCompras[i].peso);
+	}
 }
