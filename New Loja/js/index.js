@@ -188,11 +188,19 @@ function Carrinho(dono, produto){
 	}
 }
 
-function adicionaNoCarrinho(dono, produto){
+function adicionaNoCarrinho(dono, produto, quantidade){
 
 	var i = 0;
 	var length;
+
+	if(quantidade <= 0){
+		document.getElementById('form').innerHTML = "Quantidade inválida";
+	}else{
+		produto.quantidade = quantidade;
+	}
+
 	var carrinho = new Carrinho(dono, produto);
+
 	if (listaCarrinhos.length == 0) {
 		listaCarrinhos[0] = carrinho;
 	}else{
@@ -246,16 +254,24 @@ function mostraForm(){
 }
 
 function calculaValorTotal(dono){
-	
+	for (var i = 0; i < listaCarrinhos.length; i++) {
+		if (listaCarrinhos[i].dono == dono) {
+			valorTotal += calculaValorItem(listaCompras,i);
+		}
+	}
+	document.getElementById("daTabela").innerHTML = valorTotal;
 }
 
-function calculaValorItem(){
+function calculaValorItem(lista, indice){
 
+	var testeQtde;
 	var testeValor;
 	var testePeso;
 
-	for (var i = 0; i < listaCompras.length; i++) {
-		testeValor += parseFloat(listaCompras[i].preco);
-		testePeso += parseFloat(listaCompras[i].peso);
-	}
+	testeQtde = lista[indice].quantidade;
+	testePeso = parseFloat(lista[indice].peso);
+	testeValor = testePeso * testeQtde * 12.50;
+
+	document.getElementById("daTabela").innerHTML = lista[indice].nome +":"+ testeValor;
+
 }
