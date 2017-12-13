@@ -1,0 +1,26 @@
+.header{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+#titulo{
+	text-align: center;
+}
+#conteudo{
+	padding-top: 60px;
+}
+.nav nav-pills{
+	margin-top: 2px;
+}
+#p1{
+	margin-top: 1em;
+}
+#p1,#p2,#p3,#p4{
+	text-align:justify;		
+	width:250px;
+}
+.img{
+	border-top-style: 2em;
+}
+.btn btn-success, .btn btn-danger{
+	float: left;
+}
