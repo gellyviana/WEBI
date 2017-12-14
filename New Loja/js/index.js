@@ -91,7 +91,7 @@ function onloadLoja(){
 		btnComprar.value = "Adicionar ao Carrinho";
 		btnComprar.type = "button";
 		btnComprar.id = i ;
-		btnComprar.onclick = "mostraForm()";
+		btnComprar.setAttribute(onclick, "mostraForm()");
 		btnCancelar.className = "btn btn-danger";
 		btnCancelar.value = "Cancelar";
 		btnCancelar.type = "button";
@@ -186,7 +186,7 @@ function onloadLoja(){
 	document.getElementById('conteudo').appendChild(divNova2);
 	document.getElementById('conteudo').appendChild(divNova3);
 	document.getElementById('conteudo').appendChild(divNova4);
-	//document.getElementById('bs-docs-header').appendChild(filho);
+	
 }
 
 function Usuario(nome){
@@ -259,39 +259,6 @@ $('#chamaForm').on('click', mostraForm);
 
 function mostraForm(){
 	
-	var divForm = document.getElementById("form");
-	var div1 = document.createElement("div");
-	var div2 = document.createElement("div");
-	var div3 = document.createElement("div");
-	var div4 = document.createElement("div");
-	var divInput = document.createElement("div");
-	
-	var form = document.createElement("FORM");
-	var label = document.createElement("LABEL");
-	var input = document.createElement("INPUT");
-
-	div1.className = "col-md-2";
-	div2.className = "col-md-8";
-	div3.className = "col-md-2";
-	divInput.className = "col-sm-10"
-
-	form.className = "form-horizontal"
-	div4.className = "form-group";
-
-	label.for = "inputName";
-	label.className = "col-sm-2 control-label";
-	input.type = "text";
-	input.className = "form-control";
-	input.id = "inputName";
-	input.placeholder = "Maria da Silva";	
-
-	div4.appendChild(form);
-	div2.appendChild(div4);
-	divInput.appendChild(form);
-	divForm.appendChild(div1);
-	divForm.appendChild(div2);
-	divForm.appendChild(div3);
-	document.getElementById('conteudo').appendChild(divForm);
 
 }
 
