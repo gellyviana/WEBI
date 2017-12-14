@@ -31,8 +31,9 @@ var vetorProdutos = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12];
 
 function onloadLoja(){
 
-
-	var divNova1 = document.createElement("div");
+	var x = document.createElement("INPUT");
+    
+    var divNova1 = document.createElement("div");
 	var divNova2 = document.createElement("div");
 	var divNova3 = document.createElement("div");
 	var divNova4 = document.createElement("div");
@@ -42,6 +43,7 @@ function onloadLoja(){
 	divNova3.className = "col-md-4";
 	divNova4.className = "col-md-2";
 	
+	var filho = document.getElementById('conteudo');
 
 	var img;
 	var nomeProduto;
@@ -49,11 +51,13 @@ function onloadLoja(){
 	var precoProduto;
 	var pesoProduto;
 	var descricaoProduto;
+	var quantidade;
 
 	var paragrafo1;
 	var paragrafo2;
 	var paragrafo3;
 	var paragrafo4;
+	var paragrafo5;
 
 	var btnComprar;
 	var btnCancelar;
@@ -65,23 +69,29 @@ function onloadLoja(){
 		img.setAttribute("width", "250");
 		img.setAttribute("height", "300");
 
+		x.setAttribute("type", "number");
+    	x.setAttribute("value", "0");
+
 		paragrafo1 = document.createElement("p");
 		paragrafo2 = document.createElement("p");
 		paragrafo3 = document.createElement("p");
 		paragrafo4 = document.createElement("p");
+		paragrafo5 = document.createElement("p");
 
 		paragrafo1.id = "p1";
 		paragrafo2.id = "p2";
 		paragrafo3.id = "p3";
 		paragrafo4.id = "p4";
+		paragrafo5.id = "p5";
 
-		btnComprar = document.createElement("input");
-		btnCancelar = document.createElement("input");
+		btnComprar = document.createElement("INPUT");
+		btnCancelar = document.createElement("INPUT");
 
 		btnComprar.className = "btn btn-success";
 		btnComprar.value = "Adicionar ao Carrinho";
-		btnComprar.type = "submit";
-		btnComprar.id = "chamaForm" ;
+		btnComprar.type = "button";
+		btnComprar.id = i ;
+		btnComprar.onclick = "mostraForm()";
 		btnCancelar.className = "btn btn-danger";
 		btnCancelar.value = "Cancelar";
 		btnCancelar.type = "button";
@@ -91,17 +101,22 @@ function onloadLoja(){
 		precoProduto = vetorProdutos[i].preco;
 		pesoProduto = vetorProdutos[i].peso;
 		descricaoProduto = vetorProdutos[i].descricao;
+		quantidade = "Qtd: ";
 
 		paragrafo1.innerHTML = nomeProduto;
 		paragrafo2.innerHTML = codigoProduto;
 		paragrafo3.innerHTML = pesoProduto;
 		paragrafo4.innerHTML = descricaoProduto;
+		paragrafo5.innerHTML = quantidade;
+
+		paragrafo5.appendChild(x);
 
 		divNova2.appendChild(img);
 		divNova2.appendChild(paragrafo1);
 		divNova2.appendChild(paragrafo2);
 		divNova2.appendChild(paragrafo3);
 		divNova2.appendChild(paragrafo4);
+		divNova2.appendChild(paragrafo5);
 		divNova2.appendChild(btnComprar);
 		divNova2.appendChild(btnCancelar);
 		
@@ -114,43 +129,54 @@ function onloadLoja(){
 		img.setAttribute("width", "250");
 		img.setAttribute("height", "300");
 
+		x.setAttribute("type", "number");
+    	x.setAttribute("value", "0");
+
 		paragrafo1 = document.createElement("p");
 		paragrafo2 = document.createElement("p");
 		paragrafo3 = document.createElement("p");
 		paragrafo4 = document.createElement("p");
+		paragrafo5 = document.createElement("p");
 
 		paragrafo1.id = "p1";
 		paragrafo2.id = "p2";
 		paragrafo3.id = "p3";
 		paragrafo4.id = "p4";
-
-		paragrafo1.innerHTML = nomeProduto;
-		paragrafo2.innerHTML = codigoProduto;
-		paragrafo3.innerHTML = pesoProduto;
-		paragrafo4.innerHTML = descricaoProduto;
+		paragrafo5.id = "p5";
 
 		nomeProduto = vetorProdutos[i].nome;
 		codigoProduto = vetorProdutos[i].codigo;
 		precoProduto = vetorProdutos[i].preco;
 		pesoProduto = vetorProdutos[i].peso;
 		descricaoProduto = vetorProdutos[i].descricao;
+		quantidade = "Qtd: ";
 
-		btnComprar = document.createElement("input");
-		btnCancelar = document.createElement("input");
+		paragrafo1.innerHTML = nomeProduto;
+		paragrafo2.innerHTML = codigoProduto;
+		paragrafo3.innerHTML = pesoProduto;
+		paragrafo4.innerHTML = descricaoProduto;
+		paragrafo5.innerHTML = quantidade;
+
+		btnComprar = document.createElement("INPUT");
+		btnCancelar = document.createElement("INPUT");
 
 		btnComprar.className = "btn btn-success";
 		btnComprar.value = "Adicionar ao Carrinho";
-		btnComprar.type = "submit";
-		btnComprar.id = "chamaForm" ;
+		btnComprar.type = "button";
+		btnComprar.id = i ;
+		btnComprar.onclick = "mostraForm()";
 		btnCancelar.className = "btn btn-danger";
 		btnCancelar.value = "Cancelar";
 		btnCancelar.type = "button";
+
+		paragrafo5.appendChild(x);
 
 		divNova3.appendChild(img);
 		divNova3.appendChild(paragrafo1);
 		divNova3.appendChild(paragrafo2);
 		divNova3.appendChild(paragrafo3);
 		divNova3.appendChild(paragrafo4);
+		divNova3.appendChild(paragrafo5);
 		divNova3.appendChild(btnComprar);
 		divNova3.appendChild(btnCancelar);
 		
@@ -160,6 +186,7 @@ function onloadLoja(){
 	document.getElementById('conteudo').appendChild(divNova2);
 	document.getElementById('conteudo').appendChild(divNova3);
 	document.getElementById('conteudo').appendChild(divNova4);
+	//document.getElementById('bs-docs-header').appendChild(filho);
 }
 
 function Usuario(nome){
@@ -237,19 +264,34 @@ function mostraForm(){
 	var div2 = document.createElement("div");
 	var div3 = document.createElement("div");
 	var div4 = document.createElement("div");
+	var divInput = document.createElement("div");
 	
+	var form = document.createElement("FORM");
+	var label = document.createElement("LABEL");
+	var input = document.createElement("INPUT");
+
 	div1.className = "col-md-2";
 	div2.className = "col-md-8";
 	div3.className = "col-md-2";
+	divInput.className = "col-sm-10"
 
-	div4.className = "input-group";
+	form.className = "form-horizontal"
+	div4.className = "form-group";
 
-	var span = document.createElement("span");
-	var input = document.createElement("input");
+	label.for = "inputName";
+	label.className = "col-sm-2 control-label";
+	input.type = "text";
+	input.className = "form-control";
+	input.id = "inputName";
+	input.placeholder = "Maria da Silva";	
 
-	div4.insertBefore(span, input);
+	div4.appendChild(form);
 	div2.appendChild(div4);
+	divInput.appendChild(form);
+	divForm.appendChild(div1);
 	divForm.appendChild(div2);
+	divForm.appendChild(div3);
+	document.getElementById('conteudo').appendChild(divForm);
 
 }
 
