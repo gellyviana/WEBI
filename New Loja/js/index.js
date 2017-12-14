@@ -42,8 +42,6 @@ function onloadLoja(){
 	divNova2.className = "col-md-4";
 	divNova3.className = "col-md-4";
 	divNova4.className = "col-md-2";
-	
-	var filho = document.getElementById('conteudo');
 
 	var img;
 	var nomeProduto;
@@ -91,7 +89,7 @@ function onloadLoja(){
 		btnComprar.value = "Adicionar ao Carrinho";
 		btnComprar.type = "button";
 		btnComprar.id = i ;
-		btnComprar.setAttribute(onclick, "mostraForm()");
+		btnComprar.onclick = "mostraForm()";
 		btnCancelar.className = "btn btn-danger";
 		btnCancelar.value = "Cancelar";
 		btnCancelar.type = "button";
@@ -255,11 +253,8 @@ function removerDoCarrinho(dono, produto){
 	}
 }
 
-$('#chamaForm').on('click', mostraForm);
-
 function mostraForm(){
-	
-
+ 
 }
 
 function calculaValorTotal(dono){
@@ -284,3 +279,4 @@ function calculaValorItem(lista, indice){
 	document.getElementById("daTabela").innerHTML = lista[indice].nome +":"+ testeValor;
 
 }
+

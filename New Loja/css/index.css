@@ -8,6 +8,9 @@
 .bs-docs-header{
 	margin-top: 20px;
 }
+#nav{
+	background: #FFFAF0;
+}
 #conteudo{
 	padding-top: 60px;
 	margin-left: 70px;
@@ -41,4 +44,14 @@
 #jumbotron{
 	background: #FFE4C4;
 	padding-left: 10px;
+}
+#salvar{
+	margin-top: 10px;
+	margin-left: 355px;
+}
+#h3{
+	text-align: center;
+}
+#myTable{
+	margin-top: 60px;
 }
