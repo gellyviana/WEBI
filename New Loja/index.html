@@ -19,8 +19,83 @@
     <![endif]-->
   </head>
   <body onload="onloadLoja()">
-    
-    <div class="nav">
+
+	<div class="container">
+		<ul class="nav nav-tabs">
+		<li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+		<li><a data-toggle="tab" href="#loja">Loja</a></li>
+		<li><a data-toggle="tab" href="#menu3" onclick="atualizaHtmlCarrinho()">Carrinho</a></li>
+		<li><a data-toggle="tab" href="#form" id="botao" >Cadastro/Login</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="home" class="tab-pane fade in active">
+			  	<!-- <h3>HOME</h3> -->
+			  	<div class="bs-docs-header">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div class="jumbotron" id="jumbotron">
+					  <h1>Criações Gelly</h1>
+					  <p>A sua loja virtual mais completa de opções para fardamento de profissionais de saúde, sempre com novidades e promoções para você e sua empresa.</p>
+					  <p><a class="btn btn-primary btn-lg" href="#conteudo" role="button" onclick="mostraLoja()">Loja Virtual</a></p>
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+				</div>
+			</div>
+			<div id="loja" class="tab-pane fade">
+			  	<!-- <h3>Loja</h3> -->
+			  	<div class="conteudo" id="conteudo">
+				</div>
+			</div>
+
+			<div id="form" class="tab-pane fade">
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6">
+					<form class="form-horizontal" id="form">
+						<div class="form-group">
+						<h3>Cadastro/Login</h3>
+					    <label for="inputName" class="col-sm-2 control-label">Nome</label>
+					    <div class="col-sm-10">
+					        <input type="text" class="form-control" id="inputUser" placeholder="Maria da Silva">
+					        <button type="button" class="btn btn-primary" id="salvar" onclick="login()">Entrar</button>
+					    </div>
+						</div>
+					</form>
+					</div>
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+
+
+
+			<div id="menu3" class="tab-pane fade">
+		    	<div class="row">
+		    		<div class="col-md-2"></div>
+			    	<div class="col-md-8">
+			    		<table class="table table-striped" id="carrinho">
+			    			<thead>
+				            <tr>
+				              <strong id="nomeUser"></strong>
+				              <th>Produto</th>
+				              <th>Quantidade</th>
+				              <th>Valor Unitário</th>
+				              <th>Peso Total do Item</th>
+				              <th>Valor Total do Item</th>
+				            </tr>
+				            </thead>
+				            <tbody id="conteudoCarrinho">
+				            </tbody>
+			    		</table>
+			    	</div>
+		    	<div class="col-md-2"></div>
+		    	</div>
+			</div>
+		</div>
+	</div>
+	
+    <!-- <div class="nav">
 	    <div class="col-md-2"></div>
 	    <div class="col-md-8">
 	    <header><h2 id="titulo"></h2></header>
@@ -29,58 +104,9 @@
 			  <li role="presentation"><a href="#conteudo">Loja</a></li>
 			  <li role="presentation"><a href="#carrinho">Carrinho</a></li>
 			  <li role="presentation"><a href="#form">Login</a></li>
-			</ul>
 	    </div>
 	    <div class="col-md-2"></div>
-	</div>
-	<div class="bs-docs-header">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class="jumbotron" id="jumbotron">
-			  <h1>Criações Gelly</h1>
-			  <p>A sua loja virtual mais completa de opções para fardamento de profissionais de saúde, sempre com novidades e promoções para você e sua empresa.</p>
-			  <p><a class="btn btn-primary btn-lg" href="#conteudo" role="button">Loja Virtual</a></p>
-			</div>
-		</div>
-		<div class="col-md-2"></div>
-	</div>
-    <div class="conteudo" id="conteudo">
-    </div>
-    <div class="row">
-    	<div class="col-md-3"></div>
-    	<div class="col-md-6">
-    		<form class="form-horizontal" id="form">
-    			<h3 id="h3">Formulário</h3>
-				<div class="form-group">
-				    <label for="inputName" class="col-sm-2 control-label">Nome</label>
-				    <div class="col-sm-10">
-				        <input type="text" class="form-control" id="inputEmail3" placeholder="Maria da Silva">
-				        <button type="button" class="btn btn-primary" id="salvar">Salvar</button>
-				    </div>
-				</div>
-			</form>
-    	</div>
-    	<div class="col-md-3"></div>
-    </div>
-    <div class="cansaco">
-    	<div class="row">
-    		<div class="col-md-2"></div>
-	    	<div class="col-md-8">
-	    		<table class="table table-striped" id="myTable">
-	    			<thead>
-		            <tr>
-		              <strong id="nomeUser">Maria da Silva</strong>
-		              <th>Produto</th>
-		              <th>Quantidade</th>
-		              <th>Valor Item</th>
-		              <th>Valor Total</th>
-		            </tr>
-		            </thead>
-	    		</table>
-	    	</div>
-    	<div class="col-md-2"></div>
-    	</div>
-    </div>
+	</div> -->
     <div class="bs-docs-footer">
     	<div class="row">
     		<div class="col-md-2"></div>
