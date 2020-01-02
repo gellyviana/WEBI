@@ -1,0 +1,120 @@
+header{
+	padding: 20px 0;
+}
+
+.detalhe{
+	border: 10px solid #272727;
+}
+
+.caixa{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 40px 0;
+}
+
+.profile{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+
+}
+
+nav{
+	position: absolute;
+	top: 120px;
+	right: 0;
+}
+
+nav h1{
+	text-transform: uppercase;
+	color: #272727;
+	font-family: sans-serif;
+	font-size: 60px;
+	text-decoration: none;
+}
+
+#titulo{
+	text-transform: uppercase;
+	color: #C2331A;
+	font-family: serif;
+	font-size: 22px;
+	text-decoration: none;
+	padding: 20px 0;
+}
+
+.perfil{
+	width: 25%;
+	max-height: 300px;
+	border-radius: 50%;
+}
+
+#itens{
+	color: #272727;
+	font-family: serif;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.row{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	border: 1px solid #272727;
+}
+
+.experiencia{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.experiencia ul{
+	list-style: inside;
+}
+
+.contato {
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.formacao{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.formacao ul{
+	list-style:inside;
+}
+
+#itens1{
+	text-transform: uppercase;
+	color:  #272727;
+	font-family: serif;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+#itens2{
+	color:  #272727;
+	font-family: serif;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.medio{
+	position: relative;
+	width: 940px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+.medio ul{
+	list-style:inside;
+}
