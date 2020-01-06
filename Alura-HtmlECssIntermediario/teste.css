@@ -1,0 +1,45 @@
+.conteudo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -40px;
+    margin-left: -160px;
+}
+
+.conteudo h1 {
+    font-size: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	z-index: -10;
+	background-color: #66E8E4;
+}
+
+.animacao{
+	display: flex;
+	height: 100vh;
+	justify-content: space-around;
+	align-items: center;
+	animation: expand 30s ease forwards;
+	background-color: #191929;
+	position: relative;
+}
+
+@keyframes expand {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(660px);
+  }
+}
